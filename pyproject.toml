@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "nonebot-plugin-template"
+name = "nonebot-plugin-rimofun"
 version = "0.1.0"
-description = "Template plugin project"
+description = "Use RimoChan's stuff to do some interesting things"
 authors = ["student_2333 <lgc2333@126.com>"]
 license = "MIT"
 readme = "README.md"
