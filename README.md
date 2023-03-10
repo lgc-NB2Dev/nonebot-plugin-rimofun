@@ -13,7 +13,7 @@
 _✨ 基于 [RimoChan](https://github.com/RimoChan) 开发的工具的有趣插件~ ✨_
 
 <a href="./LICENSE">
-    <img src="https://img.shields.io/github/license/owner/nonebot-plugin-rimofun.svg" alt="license">
+    <img src="https://img.shields.io/github/license/lgc2333/nonebot-plugin-rimofun.svg" alt="license">
 </a>
 <a href="https://pypi.python.org/pypi/nonebot-plugin-rimofun">
     <img src="https://img.shields.io/pypi/v/nonebot-plugin-rimofun.svg" alt="pypi">
