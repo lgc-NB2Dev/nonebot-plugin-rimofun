@@ -90,34 +90,38 @@ async def _(matcher: Matcher, arg: str = ArgPlainText("arg")):
     await matcher.finish(f"请您看看{nickname}的翻译厉不厉害！嘿嘿~\n{result}")
 
 
-async def trigger_rule(message: Message, state: T_State):
-    msg_txt = message.extract_plain_text().strip()
+async def trigger_rule(event: MessageEvent, state: T_State):
+    msg_txt = event.get_plaintext().strip()
     if not msg_txt:
         return False
 
     is_english = re.fullmatch(r"^[a-zA-Z0-9@$!%*?&#^-_.+\s]+$", msg_txt)
+    random_val = random.random()
+
+    types: List[Literal["bnhhsh", "yinglish", "translator"]] = []
 
     if (
         is_english
         and config.rimofun_bnhhsh_reply_chance
-        and random.random() < config.rimofun_bnhhsh_reply_chance
+        and random_val < config.rimofun_bnhhsh_reply_chance
     ):
-        state["type"] = "bnhhsh"
-        return True
+        types.append("bnhhsh")
 
     if (
         config.rimofun_yinglish_reply_chance
-        and random.random() < config.rimofun_yinglish_reply_chance
+        and random_val < config.rimofun_yinglish_reply_chance
     ):
-        state["type"] = "yinglish"
-        return True
+        types.append("yinglish")
 
     if (
         is_english
         and config.rimofun_translator_reply_chance
-        and random.random() < config.rimofun_translator_reply_chance
+        and random_val < config.rimofun_translator_reply_chance
     ):
-        state["type"] = "translator"
+        types.append("translator")
+
+    if types:
+        state["type"] = random.choice(types)
         return True
 
     return False

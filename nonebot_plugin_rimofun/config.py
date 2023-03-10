@@ -32,7 +32,7 @@ class ConfigModel(BaseModel):
     rimofun_yinglish_reply_chance: float = 0.0
     """yinglish 自动回复任意文本消息的触发概率"""
 
-    rimofun_yinglish_yingness: float = 0.5
+    rimofun_yinglish_yingness: float = 0.7
     """yinglish 默认淫乱度"""
 
     # not translator
