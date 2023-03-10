@@ -1,0 +1,6 @@
+[submodule "nonebot_plugin_rimofun/bnhhsh"]
+	path = nonebot_plugin_rimofun/bnhhsh
+	url = https://github.com/RimoChan/bnhhsh.git
+[submodule "nonebot_plugin_rimofun/not_translator"]
+	path = nonebot_plugin_rimofun/not_translator
+	url = https://github.com/RimoChan/not_translator.git
