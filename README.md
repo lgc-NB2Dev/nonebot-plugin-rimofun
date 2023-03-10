@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD033 MD036 MD041 -->
 
 <div align="center">
-  <a href="https://v2.nonebot.dev/store"><img src="https://raw.githubusercontent.com/A-kirami/nonebot-plugin-template/resources/nbp_logo.png" width="180" height="180" alt="NoneBotPluginLogo"></a>
+  <a href="https://v2.nonebot.dev/store"><img src="https://raw.githubusercontent.com/lgc2333/nonebot-plugin-rimofun/master/readme/rimofun.png" width="180" height="180" alt="NoneBotPluginLogo"></a>
   <br>
   <p><img src="https://raw.githubusercontent.com/A-kirami/nonebot-plugin-template/resources/NoneBotPlugin.svg" width="240" alt="NoneBotPluginText"></p>
 </div>
@@ -30,7 +30,7 @@ _✨ 基于 [RimoChan](https://github.com/RimoChan) 开发的工具的有趣插�
 
 ## 📖 介绍
 
-这里是插件的详细介绍部分
+把一些 [RimoChan](https://github.com/RimoChan) 的有趣的项目揉在了一起，做出了这个插件！
 
 ## 💿 安装
 
@@ -97,21 +97,14 @@ plugins = [
 
 ## ⚙️ 配置
 
-在 nonebot2 项目的`.env`文件中添加下表中的必填配置
-
-|  配置项  | 必填 | 默认值 |   说明   |
-| :------: | :--: | :----: | :------: |
-| 配置项 1 |  是  |   无   | 配置说明 |
-| 配置项 2 |  否  |   无   | 配置说明 |
+我真的懒得写文档了，请自行查看 [config.py](nonebot_plugin_rimofun/config.py)，感谢您的配合……
 
 ## 🎉 使用
 
 ### 指令表
 
-|  指令  | 权限 | 需要@ | 范围 |   说明   |
-| :----: | :--: | :---: | :--: | :------: |
-| 指令 1 | 主人 |  否   | 私聊 | 指令说明 |
-| 指令 2 | 群员 |  是   | 群聊 | 指令说明 |
+不想写文档了……累了……  
+看看 [\_\_init\_\_.py](nonebot_plugin_rimofun/__init__.py) 吧，谢谢您了……
 
 ## 📞 联系
 
@@ -122,7 +115,9 @@ Telegram：[@lgc2333](https://t.me/lgc2333)
 
 ## 💡 鸣谢
 
-如果有要鸣谢的人的话
+### [RimoChan](https://github.com/RimoChan)
+
+- 感谢这位大佬写出了这些有趣的项目！！！没有这位大佬的这些精彩作品就不会有这个插件！本 fw 在这里衷心感谢……！
 
 ## 💰 赞助
 

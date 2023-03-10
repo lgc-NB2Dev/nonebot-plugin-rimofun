@@ -7,7 +7,7 @@ from pydantic import BaseModel
 class ConfigModel(BaseModel):
     # unvcode
     rimofun_unvcode_mse: float = 0.2
-    """unvcode 的字符串不同阈值"""
+    """unvcode 的全局字符串不同阈值，比如 0.2 代表匹配 80% 相同的字符"""
 
     rimofun_unvcode_commands: List[str] = ["unvcode", "幼女码"]
     """手动触发 bnhhsh 的命令"""
@@ -20,7 +20,7 @@ class ConfigModel(BaseModel):
     """手动触发 bnhhsh 的命令"""
 
     rimofun_bnhhsh_reply_chance: float = 0.0
-    """bnhhsh 自动回复纯英文消息的触发概率"""
+    """bnhhsh 自动回复纯英文消息的触发概率，值应在 0~1 之间"""
 
     # yinglish
     rimofun_yinglish_unvcode: bool = False
@@ -30,17 +30,17 @@ class ConfigModel(BaseModel):
     """手动触发 yinglish 的命令"""
 
     rimofun_yinglish_reply_chance: float = 0.0
-    """yinglish 自动回复任意文本消息的触发概率"""
+    """yinglish 自动回复任意文本消息的触发概率，值应在 0~1 之间"""
 
     rimofun_yinglish_yingness: float = 0.7
-    """yinglish 默认淫乱度"""
+    """yinglish 默认淫乱度，值应在 0~1 之间"""
 
     # not translator
     rimofun_translator_commands: List[str] = ["not translator", "不会翻译"]
     """手动触发 not-translator 的命令"""
 
     rimofun_translator_reply_chance: float = 0.0
-    """translator 自动回复纯英文消息的触发概率"""
+    """translator 自动回复纯英文消息的触发概率，值应在 0~1 之间"""
 
     # other
     rimofun_initiative_priority: int = 99
