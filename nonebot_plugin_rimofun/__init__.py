@@ -1,13 +1,13 @@
 from nonebot.plugin import PluginMetadata
 
-from .__main__ import *  # noqa: F401, F403
+from . import __main__ as __main__
 from .config import ConfigModel, config
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __plugin_meta__ = PluginMetadata(
-    "RimoFun",
-    "用 RimoChan 开发的工具做的一个有趣的插件",
-    (
+    name="RimoFun",
+    description="用 RimoChan 开发的工具做的一个有趣的插件",
+    usage=(
         "指令列表：\n"
         "注：以下指令后面带不带参数都可以，如果没带参数，Bot 将会询问你\n"
         " \n"
@@ -27,6 +27,9 @@ __plugin_meta__ = PluginMetadata(
         "  ▷ 介绍：不会翻译机！\n"
         f"  ▷ 指令：{'；'.join(config.rimofun_translator_commands)}"
     ),
-    ConfigModel,
-    {"License": "MIT", "Author": "student_2333"},
+    homepage="https://github.com/lgc-NB2Dev/nonebot-plugin-rimofun",
+    type="application",
+    config=ConfigModel,
+    supported_adapters=["~onebot.v11"],
+    extra={"License": "MIT", "Author": "student_2333"},
 )
