@@ -101,10 +101,14 @@ plugins = [
 
 ## 🎉 使用
 
+![help](https://raw.githubusercontent.com/lgc-NB2Dev/readme/main/rimofun/-6cb8f68366e0b5f5.png)
+
+<!--
 ### 指令表
 
 不想写文档了……累了……  
 看看 [\_\_init\_\_.py](nonebot_plugin_rimofun/__init__.py) 吧，谢谢您了……
+-->
 
 ## 📞 联系
 
