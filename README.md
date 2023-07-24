@@ -14,18 +14,24 @@ _✨ 基于 [RimoChan](https://github.com/RimoChan) 开发的工具的有趣插�
 
 [幼女 Code](https://github.com/RimoChan/unvcode) | [不能好好说话](https://github.com/RimoChan/bnhhsh) | [淫语翻译机](https://github.com/RimoChan/yinglish) | [不会翻译机](https://github.com/RimoChan/not_translator)
 
-<a href="./LICENSE">
-    <img src="https://img.shields.io/github/license/lgc2333/nonebot-plugin-rimofun.svg" alt="license">
-</a>
-<a href="https://pypi.python.org/pypi/nonebot-plugin-rimofun">
-    <img src="https://img.shields.io/pypi/v/nonebot-plugin-rimofun.svg" alt="pypi">
-</a>
 <img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="python">
-<a href="https://pypi.python.org/pypi/nonebot-plugin-rimofun">
-  <img src="https://img.shields.io/pypi/dm/nonebot-plugin-rimofun" alt="pypi download">
+<a href="https://pdm.fming.dev">
+  <img src="https://img.shields.io/badge/pdm-managed-blueviolet" alt="pdm-managed">
 </a>
 <a href="https://wakatime.com/badge/user/b61b0f9a-f40b-4c82-bc51-0a75c67bfccf/project/4a5fe67b-9572-412a-84b8-064ca20f9157">
   <img src="https://wakatime.com/badge/user/b61b0f9a-f40b-4c82-bc51-0a75c67bfccf/project/4a5fe67b-9572-412a-84b8-064ca20f9157.svg" alt="wakatime">
+</a>
+
+<br />
+
+<a href="./LICENSE">
+  <img src="https://img.shields.io/github/license/lgc-NB2Dev/nonebot-plugin-rimofun.svg" alt="license">
+</a>
+<a href="https://pypi.python.org/pypi/nonebot-plugin-rimofun">
+  <img src="https://img.shields.io/pypi/v/nonebot-plugin-rimofun.svg" alt="pypi">
+</a>
+<a href="https://pypi.python.org/pypi/nonebot-plugin-rimofun">
+  <img src="https://img.shields.io/pypi/dm/nonebot-plugin-rimofun" alt="pypi download">
 </a>
 
 </div>
@@ -108,7 +114,7 @@ plugins = [
 <!--
 ### 指令表
 
-不想写文档了……累了……  
+不想写文档了……累了……
 看看 [\_\_init\_\_.py](nonebot_plugin_rimofun/__init__.py) 吧，谢谢您了……
 -->
 
