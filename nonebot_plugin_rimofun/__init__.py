@@ -1,9 +1,12 @@
+from nonebot import require
 from nonebot.plugin import PluginMetadata
 
-from . import __main__ as __main__
-from .config import ConfigModel, config
+require("nonebot_plugin_saa")
 
-__version__ = "0.1.1"
+from . import __main__ as __main__  # noqa: E402
+from .config import ConfigModel, config  # noqa: E402
+
+__version__ = "0.2.0"
 __plugin_meta__ = PluginMetadata(
     name="RimoFun",
     description="用 RimoChan 开发的工具做的一个有趣的插件",
@@ -30,6 +33,12 @@ __plugin_meta__ = PluginMetadata(
     homepage="https://github.com/lgc-NB2Dev/nonebot-plugin-rimofun",
     type="application",
     config=ConfigModel,
-    supported_adapters=["~onebot.v11"],
+    supported_adapters={
+        "~onebot.v11",
+        "~onebot.v12",
+        "~telegram",
+        "~kaiheila",
+        "~qqguild",
+    },
     extra={"License": "MIT", "Author": "student_2333"},
 )

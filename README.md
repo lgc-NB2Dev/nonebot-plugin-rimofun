@@ -12,6 +12,8 @@
 
 _✨ 基于 [RimoChan](https://github.com/RimoChan) 开发的工具的有趣插件~ ✨_
 
+[幼女 Code](https://github.com/RimoChan/unvcode) | [不能好好说话](https://github.com/RimoChan/bnhhsh) | [淫语翻译机](https://github.com/RimoChan/yinglish) | [不会翻译机](https://github.com/RimoChan/not_translator)
+
 <a href="./LICENSE">
     <img src="https://img.shields.io/github/license/lgc2333/nonebot-plugin-rimofun.svg" alt="license">
 </a>
@@ -133,4 +135,10 @@ Telegram：[@lgc2333](https://t.me/lgc2333)
 
 ## 📝 更新日志
 
-芝士刚刚发布的插件，还没有更新日志的说 qwq~
+### 0.2.0
+
+- 使用 [SAA](https://github.com/felinae98/nonebot-plugin-send-anything-anywhere) 兼容多平台消息发送
+
+### 0.1.1
+
+- 🎉 NoneBot 2.0 🚀

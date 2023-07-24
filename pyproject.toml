@@ -1,15 +1,15 @@
 [project]
 name = "nonebot-plugin-rimofun"
-version = "0.1.1"
+version = "0.2.0"
 description = "Use RimoChan's stuff to do some interesting things"
 authors = [{ name = "student_2333", email = "lgc2333@126.com" }]
 dependencies = [
     "nonebot2>=2.0.0",
-    "nonebot-adapter-onebot<3.0.0,>=2.2.1",
+    "nonebot-plugin-send-anything-anywhere>=0.2.7",
     "pydantic<2.0.0,>=1.10.6",
-    "pypinyin<1.0.0,>=0.48.0",
-    "yinglish<2.0.0,>=1.0.1",
-    "unvcode<2.0.0,>=1.0.0",
+    "pypinyin>=0.48.0",
+    "yinglish>=1.0.1",
+    "unvcode>=1.0.0",
 ]
 requires-python = ">=3.8,<4.0"
 readme = "README.md"

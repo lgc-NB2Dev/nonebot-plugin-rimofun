@@ -1,10 +1,12 @@
-from typing import List
+from typing import List, Set
 
 from nonebot import get_driver
 from pydantic import BaseModel
 
 
 class ConfigModel(BaseModel):
+    nickname: Set[str]
+
     # unvcode
     rimofun_unvcode_mse: float = 0.2
     """unvcode 的全局字符串不同阈值，比如 0.2 代表匹配 80% 相同的字符"""

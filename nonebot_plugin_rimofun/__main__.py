@@ -2,11 +2,12 @@ import random
 import re
 from typing import List, Literal, Type
 
-from nonebot import get_driver, on_command, on_message
-from nonebot.adapters.onebot.v11 import Message, MessageEvent, MessageSegment
+from nonebot import on_command, on_message
+from nonebot.internal.adapter import Event, Message
 from nonebot.matcher import Matcher
 from nonebot.params import ArgPlainText, CommandArg
 from nonebot.typing import T_State
+from nonebot_plugin_saa import MessageFactory
 
 from .config import config
 from .data_source import (
@@ -17,7 +18,7 @@ from .data_source import (
     yinglish_trans,
 )
 
-nickname = n[0] if (n := list(get_driver().config.nickname)) else "我"
+nickname = list(config.nickname)[0] if config.nickname else "咱"
 
 
 def get_command_matcher(commands: List[str], *args, **kwargs) -> Type[Matcher]:
@@ -90,7 +91,7 @@ async def _(matcher: Matcher, arg: str = ArgPlainText("arg")):
     await matcher.finish(f"请您看看{nickname}的翻译厉不厉害！嘿嘿~\n{result}")
 
 
-async def trigger_rule(event: MessageEvent, state: T_State):
+async def trigger_rule(event: Event, state: T_State):
     msg_txt = event.get_plaintext().strip()
     if not msg_txt:
         return False
@@ -135,20 +136,19 @@ matcher_initiative = on_message(
 
 
 @matcher_initiative.handle()
-async def _(matcher: Matcher, event: MessageEvent, state: T_State):
+async def _(event: Event, state: T_State):
     msg_txt = event.get_plaintext().strip()
     trigger_type: Literal["bnhhsh", "yinglish", "translator"] = state["type"]
-    reply_seg = MessageSegment.reply(event.message_id)
 
     if trigger_type == "bnhhsh":
         result = bnhhsh_trans(msg_txt)
         reply = "\n".join([f"{k}：{v}" for k, v in result.items()])
-        await matcher.finish(reply_seg + f"让{nickname}解释一下消息里出现的神秘字母吧~\n{reply}")
+        await MessageFactory(f"让{nickname}解释一下消息里出现的神秘字母吧~\n{reply}").finish(reply=True)
 
     if trigger_type == "yinglish":
         reply = yinglish_trans(msg_txt)
-        await matcher.finish(reply_seg + f"让{nickname}来把你说的话变得更涩一点~\n{reply}")
+        await MessageFactory(f"让{nickname}来把你说的话变得更涩一点~\n{reply}").finish(reply=True)
 
     if trigger_type == "translator":
         reply = not_translate(msg_txt)
-        await matcher.finish(reply_seg + f"让{nickname}把这条消息翻译一下吧！\n{reply}")
+        await MessageFactory(f"让{nickname}把这条消息翻译一下吧！\n{reply}").finish(reply=True)
