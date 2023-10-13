@@ -3,7 +3,7 @@ import re
 from typing import List, Literal, Type
 
 from nonebot import on_command, on_message
-from nonebot.internal.adapter import Event, Message
+from nonebot.adapters import Event, Message
 from nonebot.matcher import Matcher
 from nonebot.params import ArgPlainText, CommandArg
 from nonebot.typing import T_State
@@ -18,7 +18,7 @@ from .data_source import (
     yinglish_trans,
 )
 
-nickname = list(config.nickname)[0] if config.nickname else "咱"
+nickname = next(iter(config.nickname), None) if config.nickname else "咱"
 
 
 def get_command_matcher(commands: List[str], *args, **kwargs) -> Type[Matcher]:

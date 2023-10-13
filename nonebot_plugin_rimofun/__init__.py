@@ -1,5 +1,5 @@
 from nonebot import require
-from nonebot.plugin import PluginMetadata
+from nonebot.plugin import PluginMetadata, inherit_supported_adapters
 
 require("nonebot_plugin_saa")
 
@@ -33,12 +33,6 @@ __plugin_meta__ = PluginMetadata(
     homepage="https://github.com/lgc-NB2Dev/nonebot-plugin-rimofun",
     type="application",
     config=ConfigModel,
-    supported_adapters={
-        "~onebot.v11",
-        "~onebot.v12",
-        "~telegram",
-        "~kaiheila",
-        "~qqguild",
-    },
+    supported_adapters=inherit_supported_adapters("nonebot_plugin_saa"),
     extra={"License": "MIT", "Author": "student_2333"},
 )
