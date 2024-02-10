@@ -10,7 +10,7 @@ from .config import config
 from .not_translator.not_translator import translate
 
 
-def char_to_hex(s):
+def char_to_hex(s: str):
     return f"0x{s.encode('utf-8').hex()}"
 
 
@@ -24,7 +24,7 @@ def unvcode_convert(txt: str) -> str:
         logger.debug(
             "unvcode: "
             f"替换 {ori}({char_to_hex(ori)}) -> {res}({char_to_hex(res)}) "
-            f"({(1-n) * 100:.2f}% 相似)",
+            f"({(1 - n) * 100:.2f}% 相似)",
         )
 
     return result

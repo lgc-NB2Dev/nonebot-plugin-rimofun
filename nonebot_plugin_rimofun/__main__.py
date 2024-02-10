@@ -52,7 +52,9 @@ async def _(matcher: Matcher, arg: Message = CommandArg()):
 @matcher_translate.got("arg", f"要让{nickname}帮您翻译一下什么语句呢？")
 async def _(matcher: Matcher, arg: str = ArgPlainText("arg")):
     if not arg.strip():
-        await matcher.reject(f"hmm……{nickname}没有在您刚刚发的消息里看到文本呢……请您重新发一下吧qwq")
+        await matcher.reject(
+            f"hmm……{nickname}没有在您刚刚发的消息里看到文本呢……请您重新发一下吧qwq",
+        )
     matcher.skip()
 
 
@@ -66,7 +68,9 @@ async def _(matcher: Matcher, arg: str = ArgPlainText("arg")):
 async def _(matcher: Matcher, arg: str = ArgPlainText("arg")):
     result = bnhhsh_trans(arg)
     if not result:
-        await matcher.finish(f"{nickname}没有在刚刚的文本中找到英文呢……如果您还需要帮助，请重新询问我吧~")
+        await matcher.finish(
+            f"{nickname}没有在刚刚的文本中找到英文呢……如果您还需要帮助，请重新询问我吧~",
+        )
 
     message = "\n".join([f"{k}：{v}" for k, v in result.items()])
     await matcher.finish(f"就让学识渊博的{nickname}来帮您解释清楚吧(/≧▽≦)/\n{message}")
@@ -82,7 +86,9 @@ async def _(matcher: Matcher, arg: str = ArgPlainText("arg")):
         )
 
     result = yinglish_trans(txt, percent)
-    await matcher.finish(f"收到命令，{nickname}马上就让您的话语变得涩涩起来！！\n{result}")
+    await matcher.finish(
+        f"收到命令，{nickname}马上就让您的话语变得涩涩起来！！\n{result}",
+    )
 
 
 @matcher_translate.handle()
@@ -143,12 +149,18 @@ async def _(event: Event, state: T_State):
     if trigger_type == "bnhhsh":
         result = bnhhsh_trans(msg_txt)
         reply = "\n".join([f"{k}：{v}" for k, v in result.items()])
-        await MessageFactory(f"让{nickname}解释一下消息里出现的神秘字母吧~\n{reply}").finish(reply=True)
+        await MessageFactory(
+            f"让{nickname}解释一下消息里出现的神秘字母吧~\n{reply}",
+        ).finish(reply=True)
 
     if trigger_type == "yinglish":
         reply = yinglish_trans(msg_txt)
-        await MessageFactory(f"让{nickname}来把你说的话变得更涩一点~\n{reply}").finish(reply=True)
+        await MessageFactory(f"让{nickname}来把你说的话变得更涩一点~\n{reply}").finish(
+            reply=True,
+        )
 
     if trigger_type == "translator":
         reply = not_translate(msg_txt)
-        await MessageFactory(f"让{nickname}把这条消息翻译一下吧！\n{reply}").finish(reply=True)
+        await MessageFactory(f"让{nickname}把这条消息翻译一下吧！\n{reply}").finish(
+            reply=True,
+        )
