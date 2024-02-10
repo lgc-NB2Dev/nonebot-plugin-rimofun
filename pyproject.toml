@@ -4,14 +4,14 @@ version = "0.2.0.post1"
 description = "Use RimoChan's stuff to do some interesting things"
 authors = [{ name = "student_2333", email = "lgc2333@126.com" }]
 dependencies = [
-    "nonebot2>=2.1.1",
+    "nonebot2>=2.2.0",
     "nonebot-plugin-send-anything-anywhere>=0.3.2",
-    "pydantic<2.0.0,>=1.10.6",
+    "pydantic>=1.10.0,<2",  
     "pypinyin>=0.48.0",
     "yinglish>=1.0.1",
     "unvcode>=1.0.0",
 ]
-requires-python = ">=3.8,<4.0"
+requires-python = ">=3.9,<4.0"
 readme = "README.md"
 license = { text = "MIT" }
 
