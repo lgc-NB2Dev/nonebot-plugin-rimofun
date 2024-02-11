@@ -14,7 +14,7 @@ _✨ 基于 [RimoChan](https://github.com/RimoChan) 开发的工具的有趣插�
 
 [幼女 Code](https://github.com/RimoChan/unvcode) | [不能好好说话](https://github.com/RimoChan/bnhhsh) | [淫语翻译机](https://github.com/RimoChan/yinglish) | [不会翻译机](https://github.com/RimoChan/not_translator)
 
-<img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="python">
+<img src="https://img.shields.io/badge/python-3.9+-blue.svg" alt="python">
 <a href="https://pdm.fming.dev">
   <img src="https://img.shields.io/badge/pdm-managed-blueviolet" alt="pdm-managed">
 </a>
