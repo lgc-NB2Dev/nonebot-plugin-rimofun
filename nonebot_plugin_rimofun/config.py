@@ -1,6 +1,6 @@
 from typing import List, Set
 
-from nonebot import get_driver
+from nonebot import get_plugin_config
 from pydantic import BaseModel
 
 
@@ -49,4 +49,4 @@ class ConfigModel(BaseModel):
     """自动回复 matcher 的优先级"""
 
 
-config: ConfigModel = ConfigModel.parse_obj(get_driver().config.dict())
+config = get_plugin_config(ConfigModel)

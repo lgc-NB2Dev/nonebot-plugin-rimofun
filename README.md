@@ -145,6 +145,11 @@ Telegram：[@lgc2333](https://t.me/lgc2333)
 
 ## 📝 更新日志
 
+### 0.3.0
+
+- 适配 Pydantic V1 & V2
+- 换用 alconna
+
 ### 0.2.0
 
 - 使用 [SAA](https://github.com/felinae98/nonebot-plugin-send-anything-anywhere) 兼容多平台消息发送

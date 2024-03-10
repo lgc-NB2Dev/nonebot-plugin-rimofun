@@ -7,7 +7,7 @@ from nonebot.adapters import Event, Message
 from nonebot.matcher import Matcher
 from nonebot.params import ArgPlainText, CommandArg
 from nonebot.typing import T_State
-from nonebot_plugin_saa import MessageFactory
+from nonebot_plugin_alconna.uniseg import UniMessage
 
 from .config import config
 from .data_source import (
@@ -149,18 +149,21 @@ async def _(event: Event, state: T_State):
     if trigger_type == "bnhhsh":
         result = bnhhsh_trans(msg_txt)
         reply = "\n".join([f"{k}：{v}" for k, v in result.items()])
-        await MessageFactory(
-            f"让{nickname}解释一下消息里出现的神秘字母吧~\n{reply}",
-        ).finish(reply=True)
+        await UniMessage(f"让{nickname}解释一下消息里出现的神秘字母吧~\n{reply}").send(
+            reply_to=True,
+        )
+        return
 
     if trigger_type == "yinglish":
         reply = yinglish_trans(msg_txt)
-        await MessageFactory(f"让{nickname}来把你说的话变得更涩一点~\n{reply}").finish(
-            reply=True,
+        await UniMessage(f"让{nickname}来把你说的话变得更涩一点~\n{reply}").send(
+            reply_to=True,
         )
+        return
 
     if trigger_type == "translator":
         reply = not_translate(msg_txt)
-        await MessageFactory(f"让{nickname}把这条消息翻译一下吧！\n{reply}").finish(
-            reply=True,
+        await UniMessage(f"让{nickname}把这条消息翻译一下吧！\n{reply}").send(
+            reply_to=True,
         )
+        return
