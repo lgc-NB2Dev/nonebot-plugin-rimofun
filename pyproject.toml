@@ -17,6 +17,10 @@ license = { text = "MIT" }
 [project.urls]
 homepage = "https://github.com/lgc-NB2Dev/nonebot-plugin-rimofun"
 
+[tool.pdm.version]
+source = "file"
+path = "nonebot_plugin_rimofun/__init__.py"
+
 [build-system]
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
