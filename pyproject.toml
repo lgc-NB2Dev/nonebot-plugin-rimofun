@@ -5,7 +5,7 @@ description = "Use RimoChan's stuff to do some interesting things"
 authors = [{ name = "student_2333", email = "lgc2333@126.com" }]
 dependencies = [
     "nonebot2>=2.2.0",
-    "nonebot-plugin-alconna>=0.40.0rc1",
+    "nonebot-plugin-alconna>=0.40.1",
     "pypinyin>=0.48.0",
     "yinglish>=1.0.1",
     "unvcode>=1.0.0",
