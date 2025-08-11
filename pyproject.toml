@@ -4,13 +4,13 @@ dynamic = ["version"]
 description = "Use RimoChan's stuff to do some interesting things"
 authors = [{ name = "LgCookie", email = "lgc2333@126.com" }]
 dependencies = [
-    "nonebot2>=2.4.1",
-    "nonebot-plugin-alconna>=0.54.2",
-    "pypinyin>=0.53.0",
+    "nonebot2>=2.4.3",
+    "nonebot-plugin-alconna>=0.59.4",
+    "pypinyin>=0.55.0",
     "yinglish>=1.0.1",
     "unvcode>=1.0.0",
 ]
-requires-python = ">=3.9,<4.0"
+requires-python = ">=3.10,<4.0"
 readme = "README.md"
 license = { text = "MIT" }
 
