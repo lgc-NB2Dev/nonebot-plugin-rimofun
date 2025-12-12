@@ -1,5 +1,4 @@
 import re
-from typing import Dict, List, Tuple
 
 from nonebot import logger
 from unvcode import unvcode
@@ -16,7 +15,7 @@ def char_to_hex(s: str):
 
 def unvcode_convert(txt: str) -> str:
     result, mse = unvcode(txt, mse=config.rimofun_unvcode_mse)
-    change_dict: Dict[str, Tuple[str, float]] = {
+    change_dict: dict[str, tuple[str, float]] = {
         txt[i]: (result[i], x) for i, x in enumerate(mse) if (x is not None)
     }
 
@@ -30,8 +29,8 @@ def unvcode_convert(txt: str) -> str:
     return result
 
 
-def bnhhsh_trans(txt: str) -> Dict[str, str]:
-    words: List[str] = [x.lower() for x in re.findall(r"[a-zA-Z-_]+", txt)]
+def bnhhsh_trans(txt: str) -> dict[str, str]:
+    words: list[str] = [x.lower() for x in re.findall(r"[a-zA-Z-_]+", txt)]
     will_trans = []
     for it in words:
         if it not in will_trans:
@@ -45,7 +44,7 @@ def bnhhsh_trans(txt: str) -> Dict[str, str]:
     return {will_trans[i]: x for i, x in enumerate(translated)}
 
 
-def parse_yinglish_param(params: str) -> Tuple[str, float]:
+def parse_yinglish_param(params: str) -> tuple[str, float]:
     if params.endswith("%"):
         param_li = params.split(" ")
 

@@ -1,24 +1,23 @@
-from typing import List, Set
 
 from nonebot import get_plugin_config
 from pydantic import BaseModel
 
 
 class ConfigModel(BaseModel):
-    nickname: Set[str]
+    nickname: set[str]
 
     # unvcode
     rimofun_unvcode_mse: float = 0.2
     """unvcode 的全局字符串不同阈值，比如 0.2 代表匹配 80% 相同的字符"""
 
-    rimofun_unvcode_commands: List[str] = ["unvcode", "幼女码"]
+    rimofun_unvcode_commands: list[str] = ["unvcode", "幼女码"]
     """手动触发 bnhhsh 的命令"""
 
     # bnhhsh
     rimofun_bnhhsh_unvcode: bool = True
     """bnhhsh 是否使用 unvcode 反和谐"""
 
-    rimofun_bnhhsh_commands: List[str] = ["bnhhsh", "不能好好说话"]
+    rimofun_bnhhsh_commands: list[str] = ["bnhhsh", "不能好好说话"]
     """手动触发 bnhhsh 的命令"""
 
     rimofun_bnhhsh_reply_chance: float = 0.0
@@ -28,7 +27,7 @@ class ConfigModel(BaseModel):
     rimofun_yinglish_unvcode: bool = False
     """yinglish 是否使用 unvcode 反和谐"""
 
-    rimofun_yinglish_commands: List[str] = ["yinglish", "淫语"]
+    rimofun_yinglish_commands: list[str] = ["yinglish", "淫语"]
     """手动触发 yinglish 的命令"""
 
     rimofun_yinglish_reply_chance: float = 0.0
@@ -38,7 +37,7 @@ class ConfigModel(BaseModel):
     """yinglish 默认淫乱度，值应在 0~1 之间"""
 
     # not translator
-    rimofun_translator_commands: List[str] = ["not translator", "不会翻译"]
+    rimofun_translator_commands: list[str] = ["not translator", "不会翻译"]
     """手动触发 not-translator 的命令"""
 
     rimofun_translator_reply_chance: float = 0.0

@@ -1,6 +1,6 @@
 import random
 import re
-from typing import List, Literal, Type
+from typing import Literal
 
 from nonebot import on_command, on_message
 from nonebot.adapters import Event, Message
@@ -21,7 +21,7 @@ from .data_source import (
 nickname = next(iter(config.nickname), None) if config.nickname else "咱"
 
 
-def get_command_matcher(commands: List[str], *args, **kwargs) -> Type[Matcher]:
+def get_command_matcher(commands: list[str], *args, **kwargs) -> type[Matcher]:
     return on_command(commands[0], *args, aliases=set(commands[1:]), **kwargs)
 
 
@@ -105,7 +105,7 @@ async def trigger_rule(event: Event, state: T_State):
     is_english = re.fullmatch(r"^[a-zA-Z0-9@$!%*?&#^-_.+\s]+$", msg_txt)
     random_val = random.random()
 
-    types: List[Literal["bnhhsh", "yinglish", "translator"]] = []
+    types: list[Literal["bnhhsh", "yinglish", "translator"]] = []
 
     if (
         is_english
